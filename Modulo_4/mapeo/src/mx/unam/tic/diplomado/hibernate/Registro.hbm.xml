@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- Ponemos el package en donde se encuentra -->
+<hibernate-mapping
+	package="mx.unam.tic.diplomado.hibernate">
+	
+	<!-- Le ponemos el nombre de la clase y el nombre de 
+	la tabla de MariaDB -->
+	<class name="Registro" table="registros">
+		<!--  -->
+		<id name="id" column="id">
+			<generator class="identity"></generator>
+		</id>
+		<!-- Declaramos la variables como las tenemos 
+		definidas en la clase y en la base de datos
+		con sus respectivas caracteristicas -->
+		<property name="nombre" column="nombre" length="50"
+			not-null="true"></property>
+		<property name="apellido" column="apellido" length="50"
+			not-null="true"></property>
+		<property name="edad" column="edad" type="integer"
+			not-null="true"></property>
+		
+
+	</class>
+</hibernate-mapping>
