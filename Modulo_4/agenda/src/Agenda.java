@@ -50,7 +50,7 @@ public class Agenda {
 		familiar = serviciosCatalogos.cargaTipoContactoPorId(1);
 		papa.setTipoContacto(familiar);
 		
-		MedioContacto trabajo = serviciosCatalogos.cargaMedioContactoPorId(2);
+		MedioContacto trabajo = serviciosCatalogos.cargaMedioContactoPorId(3);
 		ContactoMedio contactoMedio = new ContactoMedio();
 		
 		//Datos del contacto medio 

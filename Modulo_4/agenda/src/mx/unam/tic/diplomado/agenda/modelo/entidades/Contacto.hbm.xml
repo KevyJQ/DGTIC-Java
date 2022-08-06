@@ -21,9 +21,12 @@
 		<property name="direccion" column="vc_direccion" />
 		<property name="estatus" column="vc_estatus"></property>
 
+
+		<!--  -->
 		<many-to-one name="tipoContacto" column="id_tipo_contacto"
 			lazy="false" class="TipoContacto" />
-
+			
+		<!-- cascade = que si modificamos algo, afecta a la relacion de las tablas -->	
 		<set name="contactosMedios" cascade="all" lazy="false">
 			<key column="id_contacto" />
 			<one-to-many class="ContactoMedio" />

@@ -6,6 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 import mx.unam.tic.diplomado.agenda.modelo.entidades.Contacto;
+import mx.unam.tic.diplomado.agenda.modelo.entidades.ContactoMedio;
+import mx.unam.tic.diplomado.agenda.modelo.entidades.MedioContacto;
 import mx.unam.tic.diplomado.agenda.modelo.hibernate.HibernateUtil;
 
 public class ContactoDAOImpl implements ContactoDAO {
@@ -31,7 +33,7 @@ public class ContactoDAOImpl implements ContactoDAO {
 
 			// se inicia una transaccion
 			session.beginTransaction();
-			contacto = session.get(Contacto.class, id);	
+			contacto = session.get(Contacto.class, id);
 			// se realiza el commit
 			session.getTransaction().commit();
 			// se cierra la session hibernate
@@ -120,6 +122,24 @@ public class ContactoDAOImpl implements ContactoDAO {
 			e.printStackTrace();
 			StandardServiceRegistryBuilder.destroy(HibernateUtil.getRegistry());
 		}
+	}
+
+	@Override
+	public List<ContactoMedio> cargarContactoMedio(MedioContacto medioContacto) {
+		List<ContactoMedio> contactoMedio = null;
+		try {
+			Session session = HibernateUtil.getSessionFactory().openSession();
+			session.beginTransaction();
+			contactoMedio = (List<ContactoMedio>) session
+					.createQuery("SELECT cm FROM ContactoMedio cm WHERE cm.medioContacto.id =:idMedioContacto")
+					.setParameter("idMedioContacto", medioContacto.getId()).list();
+			session.getTransaction().commit();
+			session.close();
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			StandardServiceRegistryBuilder.destroy(HibernateUtil.getRegistry());
+		}
+		return contactoMedio;
 	}
 
 }

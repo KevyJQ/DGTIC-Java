@@ -18,10 +18,10 @@
         
         <property name="valor" column="vc_valor" type="string" length="300"/>
         
-        <many-to-one name="contacto" column="id_contacto"
+        <many-to-one name="contacto" column="id_contacto" lazy="false"
         	class="Contacto"/>
         	
-        <many-to-one name="medioContacto" column="id_medio_contacto"
+        <many-to-one name="medioContacto" column="id_medio_contacto" lazy="false"
         	class="MedioContacto"/>
     </class>
 

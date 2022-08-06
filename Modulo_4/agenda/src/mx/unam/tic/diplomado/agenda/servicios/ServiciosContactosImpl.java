@@ -5,6 +5,8 @@ import java.util.List;
 import mx.unam.tic.diplomado.agenda.modelo.dao.ContactoDAO;
 import mx.unam.tic.diplomado.agenda.modelo.dao.ContactoDAOImpl;
 import mx.unam.tic.diplomado.agenda.modelo.entidades.Contacto;
+import mx.unam.tic.diplomado.agenda.modelo.entidades.ContactoMedio;
+import mx.unam.tic.diplomado.agenda.modelo.entidades.MedioContacto;
 
 public class ServiciosContactosImpl implements ServiciosContactos {
 	
@@ -47,6 +49,11 @@ public class ServiciosContactosImpl implements ServiciosContactos {
 	public void eliminaContacto(Contacto contacto) {
 		ContactoDAO contactoDAO = ContactoDAOImpl.getInstance();
 		contactoDAO.eliminaContacto(contacto);
+	}
+
+	public List<ContactoMedio> cargarContactoMedio(MedioContacto medioContacto) {
+		ContactoDAO contactoDAO = ContactoDAOImpl.getInstance();
+		return contactoDAO.cargarContactoMedio(medioContacto);
 	}
 
 }
