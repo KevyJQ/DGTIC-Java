@@ -6,6 +6,7 @@ public class ContactoMedio {
 	private String valor;
 	private Contacto contacto;
 	private MedioContacto medioContacto;
+	
 	public Integer getId() {
 		return id;
 	}

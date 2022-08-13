@@ -23,6 +23,8 @@
 			not-null="true"></property>
 		<property name="edad" column="edad" type="integer"
 			not-null="true"></property>
+			
+			
 		
 
 	</class>
