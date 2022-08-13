@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- bean definitions here -->
+	<!-- Para version 1,2 y 3 -->
+	<!-- 
+	<bean id="empleado" class="dgtic.core.modelo.Empleado"
+		scope="prototype" destroy-method="limpiar"> 
+		<property name="nombre" value="Ramon" />
+		<property name="edad" value="27" />
+	</bean>
+	-->
+	<bean id="empleado" class="dgtic.core.modelo.Empleado" scope="singleton">
+		<property name="nombre" value="Ramon" />
+		<property name="edad" value="27" />
+	</bean>
+</beans>
