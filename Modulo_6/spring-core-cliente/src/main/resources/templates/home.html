@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	Datos de Estudiante
+	<br />
+	<table class="table table-striped">
+		<thead class="table table-dark table-bordered">
+			<tr>
+				<th>Cuenta</th>
+				<th>Nombre</th>
+				<th>Materias</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="alumnos: ${alum}">
+				<td th:text="${alumnos.cuenta}"></td>
+				<td th:text="${alumnos.nombre}"></td>
+				<td>
+					<table>
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Nombre</th>
+								<th>Creditos</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="mat: ${alumnos.materias}">
+								<td th:text="${mat.id}"></td>
+								<td th:text="${mat.nombre}"></td>
+								<td th:text="${mat.creditos}"></td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+</body>
+</html>
