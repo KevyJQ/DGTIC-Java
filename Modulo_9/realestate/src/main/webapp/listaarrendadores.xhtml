@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!--
+
+    Copyright (c) 2018, 2021 Oracle and/or its affiliates. All rights reserved.
+
+    This program and the accompanying materials are made available under the
+    terms of the Eclipse Distribution License v. 1.0, which is available at
+    http://www.eclipse.org/org/documents/edl-v10.php.
+
+    SPDX-License-Identifier: BSD-3-Clause
+
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+	<title>Arrendador</title>
+
+	<style>
+h1 {
+	color: #212F3C;
+	text-align: center;
+	border-color: Aquamarine Aquamarine Aquamarine;
+	border-width: 6px 10px 6px;
+	border-style: groove groove groove;
+}
+</style>
+</h:head>
+<h:body>
+	<h1>Lista de Arrendadores</h1>
+	<h:form>
+		<h3>Ingresa los siguientes datos</h3>
+		<p></p>
+		<label>Nombre:</label>
+		&nbsp;
+		<h:inputText id="nombre" value="#{arrendador.nombre}" />
+		<p></p>
+		<label>Apellido Paterno:</label>
+		&nbsp;
+		<h:inputText id="paterno" value="#{arrendador.paterno}" />
+		<p></p>
+		<label>Apellido Materno:</label>
+		&nbsp;
+		<h:inputText id="materno" value="#{arrendador.materno}" />
+		<p></p>
+		<label>Correo:</label>
+		&nbsp;
+		<h:inputText id="correo" value="#{arrendador.correo}" />
+		<p></p>
+		<label>Direccion:</label>
+		&nbsp;
+		<h:inputText id="direccion" value="#{arrendador.direccion}" />
+		<p></p>
+		<label>Ciudad:</label>
+		&nbsp;
+		<h:inputText id="ciudad" value="#{arrendador.ciudad}" />
+		<p></p>
+		<label>Estado:</label>
+		&nbsp;
+		<h:inputText id="estado" value="#{arrendador.estado}" />
+		<p></p>
+		<h:commandButton id="agregar" value="Agregar">
+			<f:ajax
+				execute="nombre paterno materno correo direccion ciudad estado"
+				listener="#{arrendador.agregar}" render="arrendadores" />
+		</h:commandButton>
+		<p></p>
+	</h:form>
+
+	<h:dataTable id="arrendadores" value="#{arrendador.arrendadores}"
+		var="arrendado" border="2" summary="Lista de Arrendadores">
+		<h:column>
+			<f:facet name="header">
+				Nombre
+			</f:facet>
+			<h:outputText value="#{arrendado.nombre}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">
+				Apellido Paterno
+			</f:facet>
+			<h:outputText value="#{arrendado.paterno}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">
+				Apellido Materno
+			</f:facet>
+			<h:outputText value="#{arrendado.materno}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">
+				Correo
+			</f:facet>
+			<h:outputText value="#{arrendado.correo}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">
+				Direccion
+			</f:facet>
+			<h:outputText value="#{arrendado.direccion}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">
+				Ciudad
+			</f:facet>
+			<h:outputText value="#{arrendado.ciudad}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">
+				Estado
+			</f:facet>
+			<h:outputText value="#{arrendado.estado}" />
+		</h:column>
+
+	</h:dataTable>
+	<h:form>
+		<p></p>
+		<h:commandButton id="Index" value="Menu Principal" action="index" />
+	</h:form>
+</h:body>
+</html>
