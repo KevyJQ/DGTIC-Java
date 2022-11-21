@@ -20,4 +20,5 @@ public class StatefulEJB {
         System.out.println("imprimiendo dentro del ejb con instancia: " + this);
         return datos;
     }
+    
 }
