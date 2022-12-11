@@ -11,8 +11,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import mx.unam.diplomado.dao.ArrendadorDao;
 import mx.unam.diplomado.ejb.StatefulEJB;
 
-@WebServlet("/index")
-public class EjemploServlet extends HttpServlet {
+@WebServlet("/arrendador")
+public class ArrendadorServlet extends HttpServlet {
 
 	private ArrendadorDao arrendadorDao;
 
@@ -24,7 +24,7 @@ public class EjemploServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		req.setAttribute("mivariable", service.saludar("Kevy"));
-		getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
+		getServletContext().getRequestDispatcher("/arrendador.jsp").forward(req, resp);
 		System.out.println("Hola soy prueba");
 
 	}

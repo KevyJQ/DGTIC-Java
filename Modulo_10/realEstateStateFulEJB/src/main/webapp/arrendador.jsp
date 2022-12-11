@@ -14,9 +14,9 @@ h2 {
 </style>
 </head>
 <body>
-	<h2>--- Real Estate --</h2>
+	<h2>--- Arrendador --</h2>
 	#{mivariable}
-	<h3>Hola #{resultado.saludo}</h3>
+	<h3>Hola soy arrendador #{resultado.saludo}</h3>
 
 	<h3>Este es el contador #{resultado.contador}</h3>
 </body>
