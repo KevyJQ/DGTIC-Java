@@ -1,0 +1,14 @@
+insert into Maestros VALUES ("1A","Juan","Lopez","2001-01-01",1.78);
+insert into Maestros values ("2A","Nadia","Perez","2001-01-10",1.56);
+insert into Maestros values ("3B","Perla","Calles","2001-01-20",1.60);
+insert into Maestros values ("4A","Carlos","Madero","2001-01-01",1.68);
+insert into Maestros values ("5A","Javier","Amaro","2001-02-10",1.75);
+insert into Maestros values ("6C","Jesus","Garcia","2001-03-20",1.65);
+insert into Maestros values ("7B","Gema",null,"2001-03-20",1.53);
+insert into Maestros VALUES ("20A","Pepe","Lopez","2001-01-01",1.79);
+insert into Maestros VALUES ("30A","Ricardo","Perez","2001-01-10",1.59);
+insert into Maestros VALUES ("32B","Daniela","Calles","2001-01-20",1.64);
+insert into Maestros VALUES ("42A","Mariano","Madero","2001-01-01",1.61);
+insert into Maestros VALUES ("90A","Luis","Amaro","2001-02-10",1.80);
+insert into Maestros VALUES ("63C","Jannine","Garcia","2001-03-20",1.55);
+insert into Maestros VALUES ("78B","Majo",null,"2001-03-20",1.58);
