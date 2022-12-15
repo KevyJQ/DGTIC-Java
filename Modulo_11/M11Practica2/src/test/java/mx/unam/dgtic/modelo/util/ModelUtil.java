@@ -1,0 +1,78 @@
+//package mx.unam.dgtic.modelo.util;
+//
+//import java.util.Date;
+//
+//import mx.unam.dgtic.modelo.Arrendador;
+//import mx.unam.dgtic.modelo.Arrendatario;
+//import mx.unam.dgtic.modelo.Direccion;
+//import mx.unam.dgtic.modelo.RealEstate;
+//import mx.unam.dgtic.modelo.RealEstateEstatus;
+//import mx.unam.dgtic.modelo.TypeRealEstate;
+//
+///*
+// * ModelUtil contiene metodos para crear Model objects usados
+// * en los test cases.
+// */
+//public class ModelUtil {
+//
+//	public static Direccion crearDireccion() {
+//		Direccion direccion = new Direccion();
+//		Date date = new Date();
+//		direccion.setCiudad("Test Ciudad " + date);
+//		direccion.setEstado("Test Estado " + date.getTime());
+//		direccion.setDireccion1("Test direccion 1");
+//		direccion.setDireccion2("Test direccion 2");
+//		direccion.setCodigoPostal("Test cp");
+//		direccion.setPais("Test Pais");
+//
+//		return direccion;
+//	}
+//
+//	public static Arrendador crearArrendador(String nombre) {
+//		Arrendador arrendador = new Arrendador();
+//		Date date = new Date();
+//		arrendador.setNombre1(nombre);
+//		arrendador.setNombre2("Test nombre2 " + date);
+//		arrendador.setApellidoPaterno("Test Apellido " + date.getTime());
+//		arrendador.setApellidoMaterno("Test materno");
+//		arrendador.setEdad(23);
+//		arrendador.setCorreo("test@gmail.com");
+//		arrendador.setCelular("659 864 9454");
+//		arrendador.setDireccion(crearDireccion());
+//
+//		return arrendador;
+//
+//	}
+//
+//	public static Arrendador crearArrendador() {
+//		return crearArrendador("Kevy");
+//	}
+//
+//	public static RealEstate crearRealEstate(Arrendador arrendador) {
+//		RealEstate re = new RealEstate();
+//		re.setArrendador(arrendador);
+//		re.setRealEstateType(TypeRealEstate.DEPARTAMENTO);
+//		re.setCostoMin(8000);
+//		re.setCostoMax(10000);
+//		re.setCostoOfertado(8500);
+//		re.setDireccion(crearDireccion());
+//		re.setEstatus(RealEstateEstatus.RENTADA);
+//
+//		return re;
+//	}
+//
+//	public static Arrendatario crearArrendatario() {
+//		Arrendatario arrendatario = new Arrendatario();
+//		Date date = new Date();
+//		arrendatario.setNombre1("Test nombre1 " + date);
+//		arrendatario.setNombre2("Test nombre2 ");
+//		arrendatario.setApellidoPaterno("Test Apellido" + date.getTime());
+//		arrendatario.setApellidoMaterno("Test materno");
+//		arrendatario.setEdad(23);
+//		arrendatario.setCorreo("test@gmail.com");
+//		arrendatario.setCelular("659 864 9454");
+//		arrendatario.setDireccion(crearDireccion());
+//
+//		return arrendatario;
+//	}
+//}
