@@ -14,6 +14,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
 @Entity
+
 public class Arrendador extends Persona {
 	@Id
 	@Column(name = "id_arrendador")

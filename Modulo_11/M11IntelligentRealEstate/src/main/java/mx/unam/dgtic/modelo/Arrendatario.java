@@ -9,6 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
+
 public class Arrendatario extends Persona {
 	@Id
 	@Column(name = "id_arrendatario")
